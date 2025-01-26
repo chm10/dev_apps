@@ -1,0 +1,14 @@
+{
+    "name": "Python Dev",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
+                "python.linting.pylintEnabled": true
+            },
+            "extensions": ["ms-python.python"]
+        }
+    },
+    "postCreateCommand": "python -m venv .venv && . .venv/bin/activate && pip install --upgrade pip"
+}
